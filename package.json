@@ -21,7 +21,7 @@
     "@angular/platform-browser": "~9.1.12",
     "@angular/platform-browser-dynamic": "~9.1.12",
     "@angular/router": "~9.1.12",
-    "@ng-bootstrap/ng-bootstrap": "^5.1.5",
+    "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "@ng-select/ng-select": "^3.7.1",
     "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
