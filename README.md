@@ -1,6 +1,7 @@
 # Angular10UpdateStarterApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+Updated to 10.2.0 per [Angular Update Guide](https://update.angular.io/?v=9.1-10.0) .
 
 ## Development server
 
