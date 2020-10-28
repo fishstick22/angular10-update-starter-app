@@ -11,7 +11,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { NavbarComponent } from './navbar/navbar.component';
 
 // shared
-//import { SharedModule          } from 'app/shared/shared.module';
+// import { SharedModule          } from 'app/shared/shared.module';
 
 @NgModule({
   imports: [

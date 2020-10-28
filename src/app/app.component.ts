@@ -9,7 +9,7 @@ import { AuthService } from 'app/core/auth/auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  // title = 'angular8-exploration-app';
+  // title = 'angular10-update-starter-app';
   title: string;
 
   constructor(@Inject(APP_CONFIG) private config: IAppConfig, public authService: AuthService) {

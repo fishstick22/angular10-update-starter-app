@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
 import { ClickOutsideDirective } from 'app/shared/directives/click-outside.directive';
@@ -8,7 +8,7 @@ describe('ClickOutsideComponent', () => {
   let component: ClickOutsideComponent;
   let fixture: ComponentFixture<ClickOutsideComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ClickOutsideComponent, ClickOutsideDirective ],
       imports: [ FormsModule ]

@@ -1,5 +1,5 @@
 import { Component, DebugElement, Injectable, NO_ERRORS_SCHEMA } from '@angular/core';
-import { TestBed, ComponentFixture, async } from '@angular/core/testing';
+import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
 import { APP_BASE_HREF } from '@angular/common';
 import { By } from '@angular/platform-browser';
 
@@ -19,7 +19,7 @@ import { RouterOutletStubComponent } from '../testing';
 
 @Injectable()
 export class MockAuthService {
-  loggedIn: boolean = false;
+  loggedIn = false;
   mockService = 'this is a mock of AuthService';
 
   login() {
@@ -37,7 +37,7 @@ export class MockAuthService {
 
 
 describe('AppComponent', () => {
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
@@ -73,6 +73,6 @@ describe('AppComponent', () => {
   //   const fixture = TestBed.createComponent(AppComponent);
   //   fixture.detectChanges();
   //   const compiled = fixture.debugElement.nativeElement;
-  //   expect(compiled.querySelector('.content span').textContent).toContain('angular8-exploration-app app is running!');
+  //   expect(compiled.querySelector('.content span').textContent).toContain('angular10-update-starter-app app is running!');
   // });
 });

@@ -1,7 +1,7 @@
 import { Component, Input, Injectable } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SharedComponent } from './shared.component';
 
@@ -34,7 +34,7 @@ describe('SharedComponent', () => {
   let component: SharedComponent;
   let fixture: ComponentFixture<SharedComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
         SharedComponent,

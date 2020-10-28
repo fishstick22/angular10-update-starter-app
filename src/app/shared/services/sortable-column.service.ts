@@ -8,15 +8,15 @@ export class SortableColumnService {
 
   private columnSortedSource = new Subject<ColumnSortedEvent>();
 
-    columnSorted$ = this.columnSortedSource.asObservable();
+  columnSorted$ = this.columnSortedSource.asObservable();
 
-    columnSorted(event: ColumnSortedEvent) {
-        this.columnSortedSource.next(event);
-    }
-
+  columnSorted(event: ColumnSortedEvent) {
+    this.columnSortedSource.next(event);
   }
 
-  export interface ColumnSortedEvent {
-    sortColumn: string;
-    sortDirection: string;
-  }
+}
+
+export interface ColumnSortedEvent {
+  sortColumn: string;
+  sortDirection: string;
+}

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
 import { DraggableDirective } from 'app/shared/directives/drag-drop/draggable.directive';
@@ -15,7 +15,7 @@ describe('DragDropComponent', () => {
 
   let dragDropService: DragDropService;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ DragDropComponent, DraggableDirective, DroppableDirective ],
       imports: [ FormsModule ],

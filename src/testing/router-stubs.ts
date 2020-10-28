@@ -49,6 +49,7 @@ export class ActivatedRouteStub {
   paramMap = this.subject.asObservable();
 
   // Test parameters
+  // tslint:disable-next-line: variable-name
   private _testParamMap: ParamMap;
   get testParamMap() { return this._testParamMap; }
   set testParamMap(params: {}) {

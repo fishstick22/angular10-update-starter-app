@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
 
   @Input() customLogoTitle: string;
 
-  show: boolean = false;
+  show = false;
 
   constructor(public authService: AuthService) {}
 
