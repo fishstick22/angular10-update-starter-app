@@ -59,9 +59,7 @@ class TestDraggableComponent {
   }
 
   removeItem(item: any, list: Array<any>) {
-    const index = list.map(function (e) {
-      return e.name;
-    }).indexOf(item.name);
+    const index = list.map( (e) => e.name).indexOf(item.name);
     list.splice(index, 1);
   }
 }

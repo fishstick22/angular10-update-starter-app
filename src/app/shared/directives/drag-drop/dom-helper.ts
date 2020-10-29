@@ -1,6 +1,7 @@
 import { ElementRef } from '@angular/core';
 
 export class DomHelper {
+  // tslint:disable:no-redundant-jsdoc
   /**
    * Polyfill for element.matches()
    * See: https://developer.mozilla.org/en/docs/Web/API/Element/matches#Polyfill
@@ -12,13 +13,14 @@ export class DomHelper {
     const proto: any = Element.prototype;
 /* tslint:disable:prefer-const */
     const func =
-      proto['matches'] ||
+      proto.matches ||
       proto.matchesSelector ||
       proto.mozMatchesSelector ||
       proto.msMatchesSelector ||
       proto.oMatchesSelector ||
       proto.webkitMatchesSelector ||
-      function (s) {
+      function(s) {
+    // tslint:disable-next-line:one-variable-per-declaration
         let matches = (this.document || this.ownerDocument).querySelectorAll(s),
           i = matches.length;
         while (--i >= 0 && matches.item(i) !== this) {}

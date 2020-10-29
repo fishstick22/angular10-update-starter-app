@@ -15,20 +15,21 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class ClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
 
-  @Input() attachOutsideOnClick: boolean = false;
-  @Input() delayClickOutsideInit: boolean = false;
-  @Input() exclude: string = '';
-  @Input() excludeBeforeClick: boolean = false;
-  @Input() clickOutsideEvents: string = '';
+  @Input() attachOutsideOnClick = false;
+  @Input() delayClickOutsideInit = false;
+  @Input() exclude = '';
+  @Input() excludeBeforeClick = false;
+  @Input() clickOutsideEvents = '';
 
   @Output() appClickOutside: EventEmitter<Event> = new EventEmitter<Event>();
 
+  // tslint:disable:variable-name
   private _nodesExcluded: Array<HTMLElement> = [];
   private _events: Array<string> = ['click'];
 
   constructor(
     private _el: ElementRef,
-    @Inject(PLATFORM_ID) private platformId: Object) {
+    @Inject(PLATFORM_ID) private platformId: object) {
     this._initOnClickBody = this._initOnClickBody.bind(this);
     this._onClickBody = this._onClickBody.bind(this);
   }
@@ -52,7 +53,7 @@ export class ClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
   ngOnChanges(changes: SimpleChanges) {
     if (!isPlatformBrowser(this.platformId)) { return; }
 
-    if (changes['attachOutsideOnClick'] || changes['exclude']) {
+    if (changes.attachOutsideOnClick || changes.exclude) {
       this._init();
     }
   }

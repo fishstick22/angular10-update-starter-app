@@ -76,6 +76,11 @@ export class DraggableDirective implements OnInit, OnDestroy {
     return this._dragEnabled;
   }
 
+  // tslint:disable:no-output-on-prefix
+  // tslint:disable:variable-name
+  // tslint:disable:variable-name
+
+
   /**
    * Event fired when Drag is started
    */
@@ -119,10 +124,10 @@ export class DraggableDirective implements OnInit, OnDestroy {
    * @private
    * Function for unbinding the drag listener
    */
-  unbindDragListener: Function;
+  unbindDragListener: () => void;
 
   constructor(protected el: ElementRef, private renderer: Renderer2,
-    private ng2DragDropService: DragDropService, private zone: NgZone) {
+              private ng2DragDropService: DragDropService, private zone: NgZone) {
   }
 
   ngOnInit() {

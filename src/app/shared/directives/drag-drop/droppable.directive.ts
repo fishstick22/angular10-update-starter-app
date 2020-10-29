@@ -18,6 +18,8 @@ import { map, filter, scan } from 'rxjs/operators';
 })
 export class DroppableDirective implements OnInit, OnDestroy {
 
+  // tslint:disable:no-output-on-prefix
+  // tslint:disable:variable-name
   /**
    *  Event fired when Drag dragged element enters a valid drop target.
    */
@@ -52,7 +54,8 @@ export class DroppableDirective implements OnInit, OnDestroy {
   /**
    * Defines compatible drag drop pairs. Values must match both in draggable and droppable.dropScope.
    */
-  @Input() dropScope: string | Array<string> | Function = 'default';
+  // tslint:disable-next-line:ban-types
+  @Input() dropScope: string | Array<string> | (Function) = 'default';
 
   /**
    * Defines if drop is enabled. `true` by default.
@@ -106,22 +109,22 @@ export class DroppableDirective implements OnInit, OnDestroy {
    * @private
    * Function for unbinding the drag enter listener
    */
-  unbindDragEnterListener: Function;
+  unbindDragEnterListener: () => void;
 
   /**
    * @private
    * Function for unbinding the drag over listener
    */
-  unbindDragOverListener: Function;
+  unbindDragOverListener: () => void;
 
   /**
    * @private
    * Function for unbinding the drag leave listener
    */
-  unbindDragLeaveListener: Function;
+  unbindDragLeaveListener: () => void;
 
   constructor(protected el: ElementRef, private renderer: Renderer2,
-    private ng2DragDropService: DragDropService, private zone: NgZone) {
+              private ng2DragDropService: DragDropService, private zone: NgZone) {
   }
 
   ngOnInit() {

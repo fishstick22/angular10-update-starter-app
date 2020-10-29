@@ -19,8 +19,8 @@ import { ClickOutsideDirective } from './click-outside.directive';
   </div>`
 })
 class TestClickOutsideComponent {
-  private countInside: number = 0;
-  private countOutside: number = 0;
+  private countInside = 0;
+  private countOutside = 0;
   private attachOutsideOnClick = false;
   private _toggleAttachOutsideOnClick() { this.attachOutsideOnClick = !this.attachOutsideOnClick; }
   private onClick(e: Event) { this.countInside++; }
