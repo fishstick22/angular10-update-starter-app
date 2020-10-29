@@ -97,31 +97,31 @@ export class DraggableDirective implements OnInit, OnDestroy {
   @Output() onDragEnd: EventEmitter<any> = new EventEmitter();
 
   /**
-   * @private
+   * private
    * Keeps track of mouse over element that is used to determine drag handles
    */
   mouseDownElement: any;
 
   /**
-   * @private
+   * private
    * Backing field for the dragEnabled property
    */
   _dragEnabled = true;
 
   /**
-   * @private
+   * private
    * Backing field for the dragImage property
    */
   _dragImage: string;
 
   /**
-   * @private
+   * private
    * Image element for the dragImage
    */
   dragImageElement: HTMLImageElement;
 
   /**
-   * @private
+   * private
    * Function for unbinding the drag listener
    */
   unbindDragListener: () => void;

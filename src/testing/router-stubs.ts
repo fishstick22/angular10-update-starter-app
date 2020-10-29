@@ -1,11 +1,12 @@
  // export for convenience.
 export { ActivatedRoute, Router, RouterLink, RouterOutlet} from '@angular/router';
 
-import { Component, Directive, Injectable, Input } from '@angular/core';
+import { Component, Directive, HostBinding, Injectable, Input } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 
 /* tslint:disable:directive-selector */
 /* tslint:disable:use-host-property-decorator */
+/* tslint:disable:no-host-metadata-property */
 @Directive({
   selector: '[routerLink]',
   host: {
@@ -16,6 +17,8 @@ import { NavigationExtras } from '@angular/router';
 /* tslint:enable:directive-selector */
 
 export class RouterLinkStubDirective {
+  // @HostBinding('')
+  // @HostListener()
   /* tslint:disable:no-input-rename */
   @Input('routerLink') linkParams: any;
   /* tslint:enable:no-input-rename */
